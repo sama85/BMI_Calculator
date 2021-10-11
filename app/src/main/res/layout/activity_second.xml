@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toStartOf="@id/female_card"
         app:cardCornerRadius="10dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#99FFFFFF">
+        android:backgroundTint="@color/card_bg">
 
         <LinearLayout
             android:layout_width="match_parent"

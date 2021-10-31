@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="buttons_color">#CD658E</color>
     <color name="card_bg">#99FFFFFF</color>
+    <color name="selected_bg">#6FFFFFFF</color>
+    <color  name = "red">#D52626</color>
+    <color  name = "green">#1F6E22</color>
 </resources>

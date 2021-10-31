@@ -12,76 +12,79 @@
         android:id="@+id/result_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Your result, Sama!"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        />
+        tools:text="Your result, Sama!" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/result_card"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_t"
+        android:layout_height="300dp"
         android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/card_bg"
         app:cardCornerRadius="10dp"
-        android:id="@+id/result_carc"
-        android:backgroundTint="@color/card_bg">
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_t">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/bmi_range"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="NORMAL"
-                android:textStyle="bold"
+                android:layout_marginTop="15dp"
                 android:textColor="#4CAF50"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="23.5"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:layout_marginTop="60dp"
-                android:textSize="60sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="You've a normal body weight, good job!"
-                android:textStyle="bold"
-                android:textColor="#90000000"
-                android:layout_marginTop="60dp"
-                android:textAlignment="center"
                 android:textSize="25sp"
-                android:gravity="center_horizontal" />
+                android:textStyle="bold"
+                tools:text="NORMAL" />
+
+            <TextView
+                android:id="@+id/bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                tools:text="23.5" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="#90000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="You've a normal body weight, good job!" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/recalculate_btn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_carc"
         android:layout_marginTop="40dp"
+        android:backgroundTint="@color/buttons_color"
         android:text="Re-calculate BMI"
         android:textSize="20sp"
-        android:backgroundTint="@color/buttons_color"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
